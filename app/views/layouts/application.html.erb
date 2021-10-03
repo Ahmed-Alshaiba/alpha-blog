@@ -11,10 +11,7 @@
   </head>
 
   <body>
-    <p style="color:green;"><% flash.each do |name, msg| %>
-      <%= msg %>
-    <% end %>
-    </p>
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
