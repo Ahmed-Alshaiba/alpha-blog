@@ -1,3 +1,7 @@
 <h1>Showing articles details</h1>
 <p><strong>Title: </strong> <%= @article.title%> </p>
 <p><strong>description: </strong> <%= @article.description%> </p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> | 
+<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Do you want to delete the article?"} %> | 
+<%= link_to 'Return to articles list', articles_path %>
