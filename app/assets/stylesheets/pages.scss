@@ -2,16 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'bootstrap/dist/css/bootstrap';
-
-.navbar {
-  background-color: #181818 !important;
+body {
+  background-image: asset-url('background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover ;
 }
 
-.head_name{
+.navbar {
+  background-color: #1b1b1b !important;
+}
+
+#logo{
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.center {
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+}
+
+.head-name{
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   text-align: center;
   font-size: 60px
 }
-body {
-  background-image: image-url('background.jpeg');
+
+.page-name{
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  text-align: center;
+  font-size: 40px;
+  color: white
 }
+.jumbotron{
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
