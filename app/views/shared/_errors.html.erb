@@ -1,6 +1,6 @@
 <% if @article.errors.any? %>
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <h4 class="alert-heading">The following errors prevented the article form saving</h4>
+    <h4 class="alert-heading">The following error/s prevented the article form saving</h4>
     <hr>
     <ul>
       <% @article.errors.full_messages.each do |msg|%>

@@ -17,6 +17,8 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(white_list)
+    # temprarely to be able to make articles / must remove the line below once you made a user authentication system 
+    @article.user = User.first
     if @article.save
       flash[:notice] = "Article was created successefully"
       redirect_to @article
