@@ -11,6 +11,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'pg'
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
