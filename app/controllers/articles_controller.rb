@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(white_list)
+    @article = Article.new(article_params)
     # temprarely to be able to make articles / must remove the line below once you made a user authentication system 
     @article.user = User.first
     if @article.save
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article.update(white_list)
+    if @article.update(article_params)
       flash[:notice] = "Article was edited successefully"
       redirect_to @article
     else
@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def white_list
+  def article_params
     params.require(:article).permit(:title, :description)
   end
 
