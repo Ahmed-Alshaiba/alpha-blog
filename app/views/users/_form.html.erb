@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="text-center">
-        <%= f.submit "Sign-up", class: "btn btn-outline-success shadow rounded" %>
+        <%= f.submit(@user.new_record? ? "Sign-up" : "Update profile", class: "btn btn-outline-success shadow rounded") %>
       </div>
     <% end %>
   </div>
