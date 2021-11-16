@@ -1,5 +1,5 @@
 <div class="container">
-  <%= render 'shared/errors' %>
+  <%= render 'shared/errors', obj: @article %>
   <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
     <%= form_with(model: @article, local: true) do |f| %>
       <div class="form-group row">
