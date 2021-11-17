@@ -2,7 +2,7 @@
   <div class="jumbotron">
   <h1 class= "text-center" id= "title"><%= @article.title%></h1>
     <div class="card shadow mb-5 bg-white rounded">
-      <h4 class="card-header text-center", id="writer"> Written by: <%= @article.user.username %> </h4>
+      <h4 class="card-header text-center", id="blogger"> Written by: <%= @article.user.username %> </h4>
       <div class="card-body">
         <h1 class="lead" id="description"><%= simple_format(@article.description) %></h1>
       </div>

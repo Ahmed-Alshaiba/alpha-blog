@@ -1,7 +1,7 @@
-<h1 class="page-name"><%= @user.username%>'s profile</h1>
+<h1 class="page-name mb-3"><%= @user.username%>'s profile</h1>
 
 <%= gravatar_for @user, size: 250 %>
 
-<h1 class="page-name">Articles</h1>
+<h1 class="page-name mt-3">Articles</h1>
 
 <%= render 'articles/article' %>
