@@ -13,6 +13,9 @@ gem 'pg'
 
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
+gem 'will_paginate', '~> 3.3'
+
+
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
