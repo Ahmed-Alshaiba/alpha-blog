@@ -17,8 +17,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    # temprarely to be able to make articles / must remove the line below once you made a user authentication system 
-    @article.user = User.last
+    @article.user = current_user
     if @article.save
       flash[:notice] = "Article was created successefully"
       redirect_to @article
