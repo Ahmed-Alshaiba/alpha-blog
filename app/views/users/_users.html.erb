@@ -12,8 +12,10 @@
             </h5>
             <p class="card-text"><%= pluralize(user.articles.count, "article") %></p>
             <a colspan="3">
-              <%= link_to "Pofile", user, class: "btn btn-outline-info"%> 
-              <%= link_to 'Edit', edit_user_path(user), class: "btn btn-outline-warning"%>               
+              <%= link_to "Pofile", user, class: "btn btn-outline-info"%>
+              <% if logged_in? && user == current_user %>
+                <%= link_to 'Edit', edit_user_path(user), class: "btn btn-outline-warning"%>  
+              <% end%>             
             </a>
           </div>
           <div class="card-footer text-muted">
