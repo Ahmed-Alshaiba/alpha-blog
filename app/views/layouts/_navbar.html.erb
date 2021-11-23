@@ -5,21 +5,21 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">                  
-      <li class="nav-item">
-        <%= link_to "Bloggers", users_path, class: "nav-link"%>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Articles
-        </a>
-        <div class="dropdown-menu dark" aria-labelledby="navbarDropdown">
-          <%= link_to 'Articles list', articles_path, class: "dropdown-item" %>
-          <% if logged_in? %>
-            <%= link_to 'Add new article', new_article_path, class: "dropdown-item" %>
-          <% end %>          
-        </div>
-      </li>
+    <ul class="navbar-nav mr-auto">
+    <% if logged_in? %>
+        <li class="nav-item">
+          <%= link_to "Bloggers", users_path, class: "nav-link"%>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Articles
+          </a>
+          <div class="dropdown-menu dark" aria-labelledby="navbarDropdown">            
+            <%= link_to 'Write an article', new_article_path, class: "dropdown-item" %>
+            <%= link_to 'Preview all articles', articles_path, class: "dropdown-item" %>
+          </div>
+        </li>      
+      <% end %>      
 
       <% if logged_in? %>
         <li class="nav-item dropdown">
