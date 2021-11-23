@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show]
-  before_action :require_user, only: [:edit, :update, :show, :destory, :index]
-  before_action :require_same_user, only: [:edit, :update]
+  before_action :set_user, only: [:edit, :update, :show, :destroy]
+  before_action :require_user, only: [:edit, :update, :show, :index]
+  before_action :require_same_user, only: [:edit, :update, :destory]
 
   def new
     @user = User.new
@@ -39,7 +39,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    flash[:notice] = "Your account and all associted articles have been deleted successfuly"
+    redirect_to root_path
+  end
+
   private
+
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
