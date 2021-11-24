@@ -11,7 +11,7 @@
             <p class="card-text"><%= truncate(article.description, length: 100)%></p>
             <a colspan="3">
               <%= link_to "Preview", article_path(article), class: "btn btn-outline-info"%>
-              <% if logged_in? && article.user == current_user %>
+              <% if logged_in? && (article.user == current_user || current_user.admin?) %>
                 <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-warning"%> 
                 <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Do you want to delete the article?"}, class: "btn btn-outline-danger" %>
               <% end %>

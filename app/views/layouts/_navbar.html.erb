@@ -24,11 +24,12 @@
       <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            My profile
+            My profile <%= "[Admin]" if current_user.admin? %>
           </a>
           <div class="dropdown-menu dark" aria-labelledby="navbarDropdown">               
             <%= link_to 'Preview my profile', user_path(current_user), class: "dropdown-item" %>
             <%= link_to 'Edit my profile', edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Delete my profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: {confirm: "Are you sure?. This action will delete your account and all the articles you have written"} %>
             <%= link_to 'Logout', logout_path, class: "dropdown-item", method: :delete %>
           </div>
         </li>

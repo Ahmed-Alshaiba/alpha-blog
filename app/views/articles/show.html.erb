@@ -9,7 +9,7 @@
       <small>Created <%= time_ago_in_words(@article.created_at)%> ago |
       Edited <%= time_ago_in_words(@article.updated_at)%>  ago</small>
       <div class="mt-2">
-        <% if logged_in? && @article.user == current_user %>
+        <% if logged_in? && (@article.user == current_user || current_user.admin?)  %>
           <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-warning"%> 
           <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Do you want to delete the article?"}, class: "btn btn-outline-danger" %>
         <% end %>
