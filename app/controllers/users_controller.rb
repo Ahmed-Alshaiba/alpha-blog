@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     @user.destroy
     session[:user_id] = nil if @user == current_user
     flash[:notice] = "Account and all associted articles were deleted successfuly"
-    redirect_to root_path
+    redirect_to users_path
   end
 
   private
