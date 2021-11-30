@@ -1,0 +1,16 @@
+<h1 class="page-name mt-4">Categories</h1>
+
+<div class="flickr_pagination">
+  <%= will_paginate @categories, :container => false %>
+</div>
+
+<%= render 'categories' %>
+
+<div class="mb-4 text-center" >
+  <%= link_to "Add a new category", new_category_path, class: "btn btn-outline-success" %>
+</div>
+
+<div class="flickr_pagination">
+  <%= will_paginate @categories, :container => false %>
+</div>
+
