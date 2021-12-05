@@ -18,10 +18,18 @@
             <%= link_to 'Write an article', new_article_path, class: "dropdown-item" %>
             <%= link_to 'Preview all articles', articles_path, class: "dropdown-item" %>
           </div>
-        </li>      
-      <% end %>      
-
-      <% if logged_in? %>
+        </li>        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu dark" aria-labelledby="navbarDropdown">                      
+            <% if current_user.admin? %>
+              <%= link_to 'Add a new category', new_category_path, class: "dropdown-item" %>
+            <% end %>
+            <%= link_to 'Preview all categories', categories_path, class: "dropdown-item" %>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             My profile <%= "[Admin]" if current_user.admin? %>
