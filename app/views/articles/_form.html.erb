@@ -17,7 +17,7 @@
       <div class="form-group row">
         <%= f.label :category, class: "col-2 col-form-label" %>
         <div class="col-10">
-          <%= f.collection_select(:category_ids, Category.all, :id, :name, {prompt: "Choose the article category (can be blank)"}, {multiple: true, class: "custom-select col-md-5 shadow rounded"}) %>
+          <%= f.collection_select(:category_ids, Category.all, :id, :name, {prompt: "Article categories"}, {multiple: true, class: "custom-select col-md-5 shadow rounded"}) %>
         </div>
       </div>      
       <div class="text-center">
