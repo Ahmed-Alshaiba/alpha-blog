@@ -1,6 +1,6 @@
 <div class="container">
   <%= render 'shared/errors', obj: @category %>
-  <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
+  <div class="jumbotron shadow p-3 mb-5 bg-gray rounded">
     <%= form_with(model: @category, local: true) do |f| %>
       <div class="form-group row">
         <%= f.label :name, "Category name", class: "col-2 col-form-label" %>

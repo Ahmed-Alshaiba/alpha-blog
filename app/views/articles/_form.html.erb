@@ -1,6 +1,6 @@
 <div class="container">
   <%= render 'shared/errors', obj: @article %>
-  <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
+  <div class="jumbotron shadow p-3 mb-5 bg-gray rounded">
     <%= form_with(model: @article, local: true) do |f| %>
       <div class="form-group row">
         <%= f.label :title, class: "col-2 col-form-label" %>
@@ -14,6 +14,12 @@
           <%= f.text_area :description, rows: 10, class: "form-control shadow rounded", placeholder: "Article description" %>
         </div>
       </div>
+      <div class="form-group row">
+        <%= f.label :category, class: "col-2 col-form-label" %>
+        <div class="col-10">
+          <%= f.collection_select(:category_ids, Category.all, :id, :name, {prompt: "Choose the article category (can be blank)"}, {multiple: true, class: "custom-select col-md-5 shadow rounded"}) %>
+        </div>
+      </div>      
       <div class="text-center">
         <%= f.submit class: "btn btn-outline-success shadow rounded" %>
       </div>
