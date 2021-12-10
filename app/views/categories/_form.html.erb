@@ -3,7 +3,7 @@
   <div class="jumbotron shadow p-3 mb-5 bg-gray rounded">
     <%= form_with(model: @category, local: true) do |f| %>
       <div class="form-group row">
-        <%= f.label :name, "Category name", class: "col-2 col-form-label" %>
+        <%= f.label :category_name, class: "col-2 col-form-label mr-1" %>
         <div class="col-10">
           <%= f.text_field :name, class: "form-control shadow rounded", placeholder: "Enter the category name" %>
         </div>

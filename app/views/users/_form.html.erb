@@ -3,19 +3,19 @@
   <div class="jumbotron shadow p-3 mb-5 bg-gray rounded">
     <%= form_with(model: @user, local: true) do |f| %>
       <div class="form-group row">
-        <%= f.label :username, class: "col-2 col-form-label" %>
+        <%= f.label :username, class: "col-2 col-form-label mr-2" %>
         <div class="col-10">
           <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter your username" %>
         </div>
       </div>
       <div class="form-group row">
-        <%= f.label :email, class: "col-2 col-form-label" %>
+        <%= f.label :email, class: "col-2 col-form-label mr-2" %>
         <div class="col-10">
           <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "example@example.com" %>
         </div>
       </div>
       <div class="form-group row">
-        <%= f.label :password, class: "col-2 col-form-label" %>
+        <%= f.label :password, class: "col-2 col-form-label mr-2" %>
         <div class="col-10">
           <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Enter your password" %>
         </div>
@@ -27,5 +27,5 @@
   </div>
 </div>
 <div class="text-center">
-  <%= link_to 'Cancel and Return to the home page', root_path, class: "btn btn-light shadow rounded" %>
+  <%= link_to 'Cancel and Return to the home page', root_path, class: "btn btn-light shadow rounded mb-3" %>
 </div>
