@@ -2,13 +2,17 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update]
   before_action :require_user
   before_action :require_admin, except: [:index, :show]
-
+  
   def new
     @category = Category.new
   end
-
+  
+  def index
+    @categories = Category.paginate(page: params[:page], per_page: 5)
+  end
+  
   def edit
-
+    
   end
 
   def update
@@ -28,10 +32,6 @@ class CategoriesController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def index
-    @categories = Category.paginate(page: params[:page], per_page: 5)
   end
 
   def show
