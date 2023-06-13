@@ -3,26 +3,51 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'bootstrap/dist/css/bootstrap';
 body {
-  background-image: asset-url('background.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover ;
-  background-attachment: fixed;
+  background-color: #F8F1F1 !important;
+}
+
+.text-success{
+  color: #E57C23 !important;
+}
+
+.text-info{
+  color: #E57C23 !important;
+}
+
+.username{
+  color: #E57C23;
+}
+
+.badge-info{
+  background-color: #025464 !important;
 }
 
 .navbar {
-  background-color: #120033 !important;
+  background-color: #025464 !important; 
 }
 
 #logo{
+  color: #E8AA42;
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
 
 #title{
+  color: #E8AA42;
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   font-weight: bold;
 }
 
+
+.center{
+  text-align: center;
+}
+
+.d-inline-block{
+  display: inline-block;
+}
+
 #blogger{
+  color: #E8AA42;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
 }
@@ -43,16 +68,18 @@ body {
 }
 
 .head-name{
+  color: #E57C23;
+
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   text-align: center;
   font-size: 60px
 }
 
 .page-name{
+  color: #E8AA42;
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   text-align: center;
   font-size: 40px;
-  color: white;
 }
 #home-jumbotron{
   background-color: rgba(0, 0, 0, 0);
@@ -87,17 +114,17 @@ body {
 .flickr_pagination .current {
   font-style: normal;
   font-weight: bold;
-  color: #91ff00;
+  color: #025464;
 }
 .flickr_pagination a {
   border: 1px solid #00000057;
-  color: #ffffff;
+  color: #E57C23;
   text-decoration: none; 
 }
 .flickr_pagination a:hover, .flickr_pagination a:focus {
-  border-color: #0e03a8;
-  background: #ffffff;
-  color: rgb(0, 0, 0); 
+  border-color: #025464;
+  background: #F8F1F1;
+  color: #025464; 
 }
 .flickr_pagination .page_info {
   color: #aaaaaa;

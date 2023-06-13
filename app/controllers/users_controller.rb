@@ -8,11 +8,11 @@ class UsersController < ApplicationController
   end
 
   def show    
-    @articles = @user.articles.paginate(page: params[:page], per_page: 5)
+    @articles = @user.articles.paginate(page: params[:page], per_page: 6)
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 5)
+    @users = User.paginate(page: params[:page], per_page: 6)
   end
 
   def edit
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Wellcome to Alpha-Blog #{@user.username}, you have signed-up succssfuly."
+      flash[:notice] = "Wellcome to Shaiba-Blog #{@user.username}, you have signed-up succssfuly."
       redirect_to articles_path
     else
       render 'new'
